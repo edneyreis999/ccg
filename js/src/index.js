@@ -8,7 +8,7 @@ server.route({
     path: "/",
     handler: (request, reply) => {
         console.log("vou tentar debugar aqui");
-        reply("Hello ee!");
+        reply("Agora falta configurar pra rodar no vscode!");
     }
 });
 server.start((err) => {
@@ -17,4 +17,4 @@ server.start((err) => {
     }
     console.log("server running at 3000");
 });
-//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/typescript-node-basic/js/src/index.js.map
+//# sourceMappingURL=c:/Users/Notebook/Desktop/ccg/ccg/js/src/index.js.map

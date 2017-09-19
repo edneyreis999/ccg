@@ -2,12 +2,12 @@
 	"compilerOptions": {
 		"module": "commonjs",
 		"target": "es6",
-		"outDir": "js/",
 		"moduleResolution": "node",
 		"sourceMap": true,
 		"watch": true,
-		"mapRoot": "js",
-		"typeRoots": ["node_modules/@types"]
+		"typeRoots": ["node_modules/@types"],
+		"outDir": "js/src/",
+        "mapRoot": "js/src/"
 	},
 	"exclude": [
 		"node_modules"

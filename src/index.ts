@@ -8,7 +8,7 @@ server.route({
     path: "/",
     handler: (request: hapi.Request, reply: hapi.ReplyNoContinue) => {
         console.log("vou tentar debugar aqui");
-        reply("Hello ee!");
+        reply("Agora falta configurar pra rodar no vscode!");
     }
 
 });

@@ -26,10 +26,10 @@
 			"request": "attach",			
 			"port": 5858,
 			"address": "localhost",
-			"sourceMaps": false,			
+			"sourceMaps": true,			
 			"restart": true,
 			"protocol": "legacy",
-			"outDir": null,
+			"outDir": "${workspaceRoot}/js/src/",
 			"localRoot": "${workspaceRoot}",
 			"remoteRoot": null
 		}
