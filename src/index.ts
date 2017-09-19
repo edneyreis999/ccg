@@ -7,7 +7,8 @@ server.route({
     method: "GET",
     path: "/",
     handler: (request: hapi.Request, reply: hapi.ReplyNoContinue) => {
-        reply("Hello World");
+        console.log("vou tentar debugar aqui");
+        reply("Hello ee!");
     }
 
 });
