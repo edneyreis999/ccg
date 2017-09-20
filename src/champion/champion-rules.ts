@@ -2,7 +2,7 @@ import {IHeroCardRules, IAvatarCardRules} from '../card/card-rules'
 
 export interface IBasicsChampionRules {
     name: string;
-    health: string;
+    health: number;
 }
 ///////////////////////////////////////////////////////////////////////////
 ////////////////////////// AVATAR CHAMPION  ///////////////////////////////

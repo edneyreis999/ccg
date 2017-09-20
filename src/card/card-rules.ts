@@ -30,8 +30,8 @@ export interface IAvatarCardInfo {
 export interface IHeroCardRules extends IBasicsCardRules {
     // 1 Classe, 1 Action, set spacific information
     heroClass: HeroClass;
-    type: IActionType;
-    typeInfo: Array<IHeroCardInfo>;
+    action: IActionType;
+    actionInfo: Array<IHeroCardInfo>;
 }
 
 export interface IActionType {
