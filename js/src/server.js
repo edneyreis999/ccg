@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Hapi = require("hapi");
-const Tasks = require("./collections");
+const Collections = require("./collections");
 function init(configs, database) {
     return new Promise(resolve => {
         const port = process.env.PORT || configs.port;
@@ -17,7 +17,7 @@ function init(configs, database) {
         }
         console.log('All plugins registered successfully.');
         console.log('Register Routes');
-        Tasks.init(server, configs, database);
+        Collections.init(server, configs, database);
         console.log('Routes registered sucessfully.');
         resolve(server);
     });

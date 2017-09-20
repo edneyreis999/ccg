@@ -1,8 +1,6 @@
 import * as Hapi from "hapi";
-//import { IPlugin } from "./plugins/interfaces";
 import { IServerConfigurations } from "./configurations";
-import * as Tasks from "./collections";
-//import * as Users from "./users";
+import * as Collections from "./collections";
 import { IDatabase } from "./database";
 
 
@@ -27,7 +25,7 @@ export function init(configs: IServerConfigurations, database: IDatabase): Promi
         console.log('All plugins registered successfully.');
         
         console.log('Register Routes');
-        Tasks.init(server, configs, database);                   
+        Collections.init(server, configs, database);                   
         console.log('Routes registered sucessfully.');
 
         resolve(server);

@@ -1,60 +1,59 @@
 import * as Hapi from "hapi";
-import TaskController from "./task-controller";
-//import * as TaskValidator from "./task-validator";
+import CollectionController from "./collection-controller";
 import { IDatabase } from "../database";
 import { IServerConfigurations } from "../configurations";
 
 export default function (server: Hapi.Server, configs: IServerConfigurations, database: IDatabase) {
 
-    const taskController = new TaskController(configs, database);
-    server.bind(taskController);
+    const collectionController = new CollectionController(configs, database);
+    server.bind(collectionController);
 
     server.route({
         method: 'GET',
-        path: '/tasks/{id}',
+        path: '/collections/{id}',
         config: {
-            handler: taskController.getTaskById,
-            description: 'Get task by id'
+            handler: collectionController.getCollectionById,
+            description: 'Get collection by id'
         }
     });
 
     server.route({
         method: 'GET',
-        path: '/tasks',
+        path: '/collections',
         config: {
-            handler: taskController.getTasks,
-            tags: ['api', 'tasks'],
-            description: 'Get all tasks.'
+            handler: collectionController.getCollections,
+            tags: ['api', 'collections'],
+            description: 'Get all collections.'
         }
     });
 
     server.route({
         method: 'DELETE',
-        path: '/tasks/{id}',
+        path: '/collections/{id}',
         config: {
-            handler: taskController.deleteTask,
-            tags: ['api', 'tasks'],
-            description: 'Delete task by id.'
+            handler: collectionController.deleteCollection,
+            tags: ['api', 'collections'],
+            description: 'Delete collection by id.'
         }
     });
 
     server.route({
         method: 'PUT',
-        path: '/tasks/{id}',
+        path: '/collections/{id}',
         config: {
-            handler: taskController.updateTask,
-            tags: ['api', 'tasks'],
-            description: 'Update task by id.',
+            handler: collectionController.updateCollection,
+            tags: ['api', 'collections'],
+            description: 'Update collection by id.',
         }
     });
 
     server.route({
         method: 'POST',
-        path: '/tasks',
+        path: '/collections',
         config: {
-            handler: taskController.createTask,
-            tags: ['api', 'tasks'],
-            description: 'Create a task.',
+            handler: collectionController.createCollection,
+            tags: ['api', 'collections'],
+            description: 'Create a collection.',
         }
     });
 }

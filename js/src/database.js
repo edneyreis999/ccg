@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Mongoose = require("mongoose");
-//import { IUser, UserModel } from "./users/user";
-const task_1 = require("./collections/task");
+const collection_1 = require("./collections/collection");
 function init(config) {
     Mongoose.Promise = Promise;
     Mongoose.connect(process.env.MONGO_URL || config.connectionString);
@@ -14,7 +13,7 @@ function init(config) {
         console.log(`Connected to database: ${config.connectionString}`);
     });
     return {
-        taskModel: task_1.TaskModel
+        collectionModel: collection_1.CollectionModel
     };
 }
 exports.init = init;
