@@ -1,9 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const deck_controller_1 = require("./deck-controller");
-function default_1(server, configs, database) {
-    const deckController = new deck_controller_1.default(configs, database);
+import * as Hapi from "hapi";
+import DeckController from "./deck-controller";
+import { IDatabase } from "../database";
+import { IServerConfigurations } from "../configurations";
+
+export default function (server: Hapi.Server, configs: IServerConfigurations, database: IDatabase) {
+
+    const deckController = new DeckController(configs, database);
     server.bind(deckController);
+
     server.route({
         method: 'GET',
         path: '/decks/{userId}/{id}',
@@ -12,6 +16,7 @@ function default_1(server, configs, database) {
             description: 'Get deck by id'
         }
     });
+
     server.route({
         method: 'GET',
         path: '/decks/{userId}',
@@ -21,6 +26,7 @@ function default_1(server, configs, database) {
             description: 'Get all decks.'
         }
     });
+
     server.route({
         method: 'DELETE',
         path: '/decks/{userId}/{id}',
@@ -30,6 +36,7 @@ function default_1(server, configs, database) {
             description: 'Delete deck by id.'
         }
     });
+
     server.route({
         method: 'PUT',
         path: '/decks/{userId}/{id}',
@@ -39,6 +46,7 @@ function default_1(server, configs, database) {
             description: 'Update deck by id.',
         }
     });
+
     server.route({
         method: 'POST',
         path: '/decks',
@@ -49,5 +57,3 @@ function default_1(server, configs, database) {
         }
     });
 }
-exports.default = default_1;
-//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/decks/routes.js.map

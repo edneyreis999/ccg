@@ -5,4 +5,4 @@ function init(server, configs, database) {
     routes_1.default(server, configs, database);
 }
 exports.init = init;
-//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/decks/index.js.map
+//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/deck/index.js.map

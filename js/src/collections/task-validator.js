@@ -12,4 +12,4 @@ export const updateTaskModel = Joi.object().keys({
     completed: Joi.boolean()
 });
 */ 
-//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/collections/task-validator.js.map
+//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/decks/task-validator.js.map

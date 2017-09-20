@@ -50,4 +50,4 @@ function default_1(server, configs, database) {
     });
 }
 exports.default = default_1;
-//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/decks/routes.js.map
+//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/deck/routes.js.map

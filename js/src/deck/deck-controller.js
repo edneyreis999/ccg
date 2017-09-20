@@ -85,4 +85,4 @@ class DeckController {
     }
 }
 exports.default = DeckController;
-//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/decks/deck-controller.js.map
+//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/deck/deck-controller.js.map

@@ -1,9 +1,9 @@
 import * as Mongoose from "mongoose";
 import { IDataConfiguration } from "./configurations";
-import { ICollection, CollectionModel } from "./collections/collection";
+import { IDeck, DeckModel } from "./decks/deck";
 
 export interface IDatabase {
-    collectionModel: Mongoose.Model<ICollection>;
+    deckModel: Mongoose.Model<IDeck>;
 }
 
 export function init(config: IDataConfiguration): IDatabase {
@@ -22,6 +22,6 @@ export function init(config: IDataConfiguration): IDatabase {
     });
 
     return {
-        collectionModel: CollectionModel
+        deckModel: DeckModel
     };
 }

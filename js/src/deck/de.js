@@ -10,4 +10,4 @@ exports.DeckSchema = new Mongoose.Schema({
     timestamps: true
 });
 exports.DeckModel = Mongoose.model('Deck', exports.DeckSchema);
-//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/decks/deck.js.map
+//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/deck/de.js.map

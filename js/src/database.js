@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Mongoose = require("mongoose");
-const collection_1 = require("./collections/collection");
+const deck_1 = require("./decks/deck");
 function init(config) {
     Mongoose.Promise = Promise;
     Mongoose.connect(process.env.MONGO_URL || config.connectionString);
@@ -13,7 +13,7 @@ function init(config) {
         console.log(`Connected to database: ${config.connectionString}`);
     });
     return {
-        collectionModel: collection_1.CollectionModel
+        deckModel: deck_1.DeckModel
     };
 }
 exports.init = init;

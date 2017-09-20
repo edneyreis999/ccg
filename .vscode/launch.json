@@ -28,7 +28,7 @@
 			"address": "localhost",
 			"sourceMaps": true,			
 			"restart": true,
-			"protocol": "legacy",
+			"protocol": "inspector",
 			"outDir": "${workspaceRoot}/js/src/",
 			"localRoot": "${workspaceRoot}",
 			"remoteRoot": null

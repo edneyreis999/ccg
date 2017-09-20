@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function getDatabaseConfig() {
-    return { "connectionString": "mongodb://localhost:27017/taskdb-dev" };
+    return { "connectionString": "mongodb://localhost:27017/ccg-database" };
 }
 exports.getDatabaseConfig = getDatabaseConfig;
 function getServerConfigs() {

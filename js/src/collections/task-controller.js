@@ -106,4 +106,4 @@ class TaskController {
     }
 }
 exports.default = TaskController;
-//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/collections/task-controller.js.map
+//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/decks/task-controller.js.map

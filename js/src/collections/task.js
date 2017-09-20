@@ -10,4 +10,4 @@ exports.TaskSchema = new Mongoose.Schema({
     timestamps: true
 });
 exports.TaskModel = Mongoose.model('Task', exports.TaskSchema);
-//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/collections/task.js.map
+//# sourceMappingURL=c:/Users/Desktop/Desktop/Typescript/Octagon/ccg/js/src/decks/task.js.map

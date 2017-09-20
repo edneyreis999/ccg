@@ -8,7 +8,7 @@ export interface IDataConfiguration {
 }
 
 export function getDatabaseConfig(): IDataConfiguration {
-    return { "connectionString": "mongodb://localhost:27017/taskdb-dev" };
+    return { "connectionString": "mongodb://localhost:27017/ccg-database" };
 }
 
 export function getServerConfigs(): IServerConfigurations {

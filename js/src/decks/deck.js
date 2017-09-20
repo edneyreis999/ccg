@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Mongoose = require("mongoose");
 exports.DeckSchema = new Mongoose.Schema({
     userId: { type: String, required: true },
+    rules: { type: Object, required: true },
     name: { type: String, required: true },
     description: String,
     completed: Boolean
