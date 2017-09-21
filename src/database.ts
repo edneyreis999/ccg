@@ -2,10 +2,12 @@ import * as Mongoose from "mongoose";
 import { IDataConfiguration } from "./configurations";
 import { IDeck, DeckModel } from "./decks/deck";
 import { IChampion, ChampionModel } from "./champion/champion";
+import { ICard, CardModel } from "./card/card";
 
 export interface IDatabase {
     deckModel: Mongoose.Model<IDeck>;
     championModel: Mongoose.Model<IChampion>;
+    cardModel: Mongoose.Model<ICard>;
 }
 
 export function init(config: IDataConfiguration): IDatabase {
@@ -25,6 +27,7 @@ export function init(config: IDataConfiguration): IDatabase {
 
     return {
         deckModel: DeckModel,
-        championModel: ChampionModel
+        championModel: ChampionModel,
+        cardModel: CardModel
     };
 }

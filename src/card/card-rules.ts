@@ -9,7 +9,6 @@ export interface IBasicsCardRules {
 export interface IAvatarCardRules extends IBasicsCardRules {
     // 1 Tipo, 1 Avatar, set spacific information
     action: AvatarActionType;
-    class: AvatarClass;
     actionInfo: Array<IAvatarActionInfo>;
 }
 
@@ -29,7 +28,6 @@ export interface IAvatarActionInfo {
 ///////////////////////////////////////////////////////////////////////////
 export interface IHeroCardRules extends IBasicsCardRules {
     // 1 Classe, 1 Action, set spacific information
-    heroClass: HeroClass;
     action: IActionType;
     actionInfo: Array<IHeroCardInfo>;
 }
