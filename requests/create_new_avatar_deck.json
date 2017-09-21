@@ -1,0 +1,97 @@
+{
+    "type" : 1,
+    "info" : {
+        "userId": "1",
+        "type": 1,
+        "name": "Deck de Trololo",
+        "description": "make him suffer!",
+        "rules": {
+            "avatar": {
+                "enrageCard": {
+                    "actionInfo": [
+                        {
+                            "description": "Boosts Avatar's attack when it recive damage",
+                            "name": "pain"
+                        }
+                    ],
+                    "action": 3,
+                    "name": "hate fill pain",
+                    "class": 0
+                },
+                "objectiveCards": [
+                    {
+                        "actionInfo": [
+                            {
+                                "description": "Boosts Avatar's attack when it attacks",
+                                "name": "fury"
+                            }
+                        ],
+                        "action": 2,
+                        "name": "make him suffer",
+                        "class": 0
+                    },
+                    {
+                        "actionInfo": [
+                            {
+                                "description": "Boosts Avatar's attack when it kills a enemy",
+                                "name": "killing spree"
+                            }
+                        ],
+                        "action": 2,
+                        "name": "kill them all",
+                        "class": 0
+                    }
+                ],
+                "spellCards": [
+                    {
+                        "actionInfo": [
+                            {
+                                "description": "freeze a enemy",
+                                "name": "freeze"
+                            }
+                        ],
+                        "action": 1,
+                        "name": "ice lance",
+                        "class": 0
+                    },
+                    {
+                        "actionInfo": [
+                            {
+                                "description": "stun a enemy",
+                                "name": "stun"
+                            }
+                        ],
+                        "action": 1,
+                        "name": "stone throw",
+                        "class": 0
+                    },
+                    {
+                        "actionInfo": [
+                            {
+                                "description": "Avatar can attack two times",
+                                "name": "windfury"
+                            }
+                        ],
+                        "action": 1,
+                        "name": "windfury",
+                        "class": 0
+                    },
+                    {
+                        "actionInfo": [
+                            {
+                                "description": "Heals itself",
+                                "name": "heal"
+                            }
+                        ],
+                        "action": 1,
+                        "name": "first aid",
+                        "class": 0
+                    }
+                ],
+                "health": 10,
+                "name": "Trololo",
+                "class": 0
+            }
+        }
+    }
+}

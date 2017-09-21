@@ -49,7 +49,7 @@ export default function (server: Hapi.Server, configs: IServerConfigurations, da
 
     server.route({
         method: 'POST',
-        path: '/decks',
+        path: '/decks/{userId}',
         config: {
             handler: deckController.createDeck,
             tags: ['api', 'decks'],

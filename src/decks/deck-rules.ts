@@ -10,4 +10,9 @@ export interface IAvatarDeckRules {
     avatar: IAvatarChampionRules;
 }
 
+export enum DeckType{
+    HERO_DECK,
+    AVATAR_DECK
+}
+
 

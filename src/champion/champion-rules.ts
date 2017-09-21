@@ -9,10 +9,10 @@ export interface IBasicsChampionRules {
 ///////////////////////////////////////////////////////////////////////////
 export interface IAvatarChampionRules extends IBasicsChampionRules {
     // 1 Avatar, 4 Spell, 2 Objective, 1 Enrage
-    class: string;
+    class: AvatarClass;
     spellCards: [IAvatarCardRules, IAvatarCardRules, IAvatarCardRules, IAvatarCardRules];
     objectiveCards: [IAvatarCardRules, IAvatarCardRules];
-    enrageCards: IAvatarCardRules;
+    enrageCard: IAvatarCardRules;
 }
 ///////////////////////////////////////////////////////////////////////////
 //////////////////////////// HERO CHAMPION  ///////////////////////////////
@@ -27,6 +27,12 @@ export enum HeroClass {
     WARRIOR,
     RANGE,
     PRIEST
+}
+
+export enum AvatarClass {
+    TROLL,
+    GOBLIN,
+    ORC
 }
 
 

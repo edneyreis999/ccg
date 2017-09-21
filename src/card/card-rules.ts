@@ -1,4 +1,4 @@
-import {HeroClass} from '../champion/champion-rules'
+import {HeroClass, AvatarClass} from '../champion/champion-rules'
 
 export interface IBasicsCardRules {
     name: string;
@@ -8,19 +8,19 @@ export interface IBasicsCardRules {
 ///////////////////////////////////////////////////////////////////////////
 export interface IAvatarCardRules extends IBasicsCardRules {
     // 1 Tipo, 1 Avatar, set spacific information
-    type: AvatarCardType;
-    class: string;
-    typeInfo: Array<IAvatarCardInfo>;
+    action: AvatarActionType;
+    class: AvatarClass;
+    actionInfo: Array<IAvatarActionInfo>;
 }
 
-export enum AvatarCardType {
+export enum AvatarActionType {
     AVATAR,
     SPELL,
     OBJECTIVE,
     ENRAGE
 }
 
-export interface IAvatarCardInfo {
+export interface IAvatarActionInfo {
     name: string;
     description: string;
 }
