@@ -1,20 +1,26 @@
 import * as Mongoose from "mongoose";
-import { IAvatarChampionRules, IHeroChampionRules } from './champion-rules'
+import { IAvatarChampionRules, IHeroChampionRules, AvatarClass, HeroClass } from './champion-rules'
 
 export interface IChampion extends Mongoose.Document {
     userId: string;
-    rules: IAvatarChampionRules | IHeroChampionRules;
+    rules?: IAvatarChampionRules | IHeroChampionRules;
+    name: string;
+    class: AvatarClass | HeroClass;
+    health?: number;
     description?: string;
-    version: string;
+    version: number;
     createdAt: Date;
     updateAt: Date;
 }
 
 export const ChampionSchema = new Mongoose.Schema({
     userId: { type: String, required: true },
-    rules: { type: Object, required: true },
+    rules: Object,
+    name: { type: String, required: true },
+    class: { type: Number, required: true },    
+    health: String,
     description: String,
-    version: String
+    version: { type: Number, required: true }, 
 }, {
         timestamps: true
     });
