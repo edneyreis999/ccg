@@ -4,6 +4,11 @@ export interface IBasicsChampionRules {
     name: string;
     health: number;
     class: AvatarClass | HeroClass;
+    faction: EChampionFaction;
+}
+export enum EChampionFaction{
+    HERO,
+    AVATAR
 }
 ///////////////////////////////////////////////////////////////////////////
 ////////////////////////// AVATAR CHAMPION  ///////////////////////////////

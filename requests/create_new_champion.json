@@ -1,5 +1,6 @@
 {
     "userId" : "1",
+    "faction": 0,
     "class" : 0,
     "name" : "Jaina",
     "description" : "Projetado para ser um hero mage",

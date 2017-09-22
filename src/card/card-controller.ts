@@ -3,7 +3,7 @@ import { ICard } from "./card";
 import { IDatabase } from "../database";
 import { IServerConfigurations } from "../configurations";
 import { IAvatarCardRules, IAvatarActionInfo, IActionType, AvatarActionType, IHeroCardInfo, IHeroCardRules} from "./card-rules"
-import { HeroClass, AvatarClass } from '../champion/champion-rules'
+import { HeroClass, AvatarClass, EChampionFaction } from '../champion/champion-rules'
 export default class CardController {
 
     private database: IDatabase;
@@ -15,12 +15,8 @@ export default class CardController {
     }
 
     public async createCard(request: Hapi.Request, reply: Hapi.ReplyNoContinue) {
-        //let newCard: ICard = request.payload;
-        let actionInfo1: IAvatarActionInfo = {name:'single target', description:'do damage to just one enemie'};
-        let actionInfo2: IAvatarActionInfo = {name:'freeze', description:'freeze enemy enemie'};
-        let rules: IAvatarCardRules = {name: 'freezes a single enemy', action: AvatarActionType.SPELL, actionInfo: [actionInfo1, actionInfo2]};
-        let newCard: ICard = {userId: '1', class:AvatarClass.TROLL , name: 'Ice Lance', description:'A Single target ice lance who freeze the enemy', version: 1, rules: rules, createdAt: new Date(), updateAt: new Date()};
-        console.log(newCard);
+        let newCard: ICard = request.payload;  
+        console.log(newCard.faction);
 
         try {
             let card: ICard = await this.database.cardModel.create(newCard);

@@ -15,9 +15,9 @@ export default class ChampionController {
     }
 
     public async createChampion(request: Hapi.Request, reply: Hapi.ReplyNoContinue) {
-       let newChampion: IChampion = request.payload;  
+        let newChampion: IChampion = request.payload;
         console.log(newChampion);
-
+        
         try {
             let champion: IChampion = await this.database.championModel.create(newChampion);
             return reply(champion).code(201);
@@ -36,18 +36,18 @@ export default class ChampionController {
                     { $set: championPayload },
                     { new: true }
                 );
-                if(champion){
-                    return reply(champion);    
-                }else{
-                    return reply("Champion com id: "+id+" não foi encontrado");    
+                if (champion) {
+                    return reply(champion);
+                } else {
+                    return reply("Champion com id: " + id + " não foi encontrado");
                 }
             } catch (error) {
                 return reply(error);
             }
-        }else{
-            return reply("invalid champion id: "+id);
+        } else {
+            return reply("invalid champion id: " + id);
         }
-        
+
     }
 
     public async deleteChampion(request: Hapi.Request, reply: Hapi.ReplyNoContinue) {
@@ -56,10 +56,10 @@ export default class ChampionController {
         if (id.match(/^[0-9a-fA-F]{24}$/)) {
             let deletedChampion = await this.database.championModel.findOneAndRemove({ _id: id });
             return reply(deletedChampion);
-        }else{
-            return reply("invalid champion id: "+id);
+        } else {
+            return reply("invalid champion id: " + id);
         }
-        
+
     }
 
     public async getChampionById(request: Hapi.Request, reply: Hapi.ReplyNoContinue) {
@@ -68,26 +68,26 @@ export default class ChampionController {
             if (id.match(/^[0-9a-fA-F]{24}$/)) {
                 let champion = await this.database.championModel.findOne({ _id: id }).lean(true);
 
-                if(champion){
+                if (champion) {
                     return reply(champion);
-                }else{
-                    return reply("Champion com id: "+id+ " não encontrado.");
+                } else {
+                    return reply("Champion com id: " + id + " não encontrado.");
                 }
-                
-            }else{
-                return reply("invalid champion id: "+id);
+
+            } else {
+                return reply("invalid champion id: " + id);
             }
-            
+
         } catch (error) {
             return reply(error);
         }
     }
 
-    public async getChampions(request: Hapi.Request, reply: Hapi.ReplyNoContinue) {        
-        let champions = await this.database.championModel.find({ }).lean(true);
-        if(champions){
+    public async getChampions(request: Hapi.Request, reply: Hapi.ReplyNoContinue) {
+        let champions = await this.database.championModel.find({}).lean(true);
+        if (champions) {
             return reply(champions);
-        }else{
+        } else {
             return reply("Ainda não temos nenhum Champion cadastrado");
         }
     }
