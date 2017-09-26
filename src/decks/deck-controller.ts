@@ -4,7 +4,7 @@ import { IDatabase } from "../database";
 import { IServerConfigurations } from "../configurations";
 
 import { IHeroChampionRules, HeroClass, IAvatarChampionRules, AvatarClass } from '../champion/champion-rules';
-import { IHeroCardRules, IHeroCardInfo, IActionType, IAvatarCardRules, IAvatarActionInfo, AvatarActionType } from '../card/card-rules';
+import {  } from '../card/card-rules';
 import { IHeroDeckRules, DeckType, IAvatarDeckRules } from './deck-rules'
 
 export default class DeckController {
@@ -31,6 +31,27 @@ export default class DeckController {
         }
         
         let newDeck: IDeck = { name: deckPayload.info.name, description: deckPayload.info.description, userId: deckPayload.info.userId, rules: deckPayload.info.rules, type: deckPayload.type, createdAt: new Date(), updateAt: new Date() };
+        // calcula ultimate
+        if(newDeck.type === DeckType.HERO_DECK){
+            let heroRules: IHeroDeckRules = <IHeroDeckRules> newDeck.rules;
+            let ultimateName = 'ULTIMATE_';
+
+            heroRules.heros.forEach(hero => {
+                if(HeroClass.WARRIOR === hero.class){
+                    ultimateName += 'W';
+                }
+                else if(HeroClass.RANGE === hero.class){
+                    ultimateName += 'R';
+                }
+                else if(HeroClass.PRIEST === hero.class){
+                    ultimateName += 'P';
+                }
+            });
+
+            heroRules.ultimate = ultimateName;
+            newDeck.rules = heroRules;
+        }
+
         console.log(newDeck);
         try {
             let deck: IDeck = await this.database.deckModel.create(newDeck);

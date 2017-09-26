@@ -1,45 +1,66 @@
 import {HeroClass, AvatarClass} from '../champion/champion-rules'
 
-export interface IBasicsCardRules {
-    name: string;
-}
 ///////////////////////////////////////////////////////////////////////////
 //////////////////////////// AVATAR CARD  /////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
-export interface IAvatarCardRules extends IBasicsCardRules {
+export interface IAvatarCardRules {
     // 1 Tipo, 1 Avatar, set spacific information
-    action: AvatarActionType;
-    actionInfo: Array<IAvatarActionInfo>;
+    action: EAvatarActionType;
+    actionEffect: Array<IActionEffect>;
+    completionEffect?: Array<IActionEffect>;
+    destructionEffect?: Array<IActionEffect>;
+    triggerEfect?: Array<IActionEffect>;
+    destructionCondition?: Array<IDestructionCondition>;
+    triggerCondition?: Array<ITriggerCondition>;
+}
+export interface IDestructionCondition {
+    actionName: EDestructionCondition;
+    actionValue?: number;
+    description?: string;
+}
+export interface ITriggerCondition {
+    actionName: EDestructionCondition;
+    actionValue?: number;
+    description?: string;
 }
 
-export enum AvatarActionType {
-    AVATAR,
+export enum EAvatarActionType {
     SPELL,
     OBJECTIVE,
     ENRAGE
 }
-
-export interface IAvatarActionInfo {
-    name: string;
-    description: string;
+export enum EDestructionCondition {
+   
+}
+export enum ETriggerCondition {
+    
 }
 ///////////////////////////////////////////////////////////////////////////
 ////////////////////////////// HEROS CARD  ////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
-export interface IHeroCardRules extends IBasicsCardRules {
+export interface IHeroCardRules {
     // 1 Classe, 1 Action, set spacific information
-    action: IActionType;
-    actionInfo: Array<IHeroCardInfo>;
+    action: EHeroActionType;
+    actionEffect: Array<IActionEffect>;
 }
 
-export interface IActionType {
-    name: string;
-    description: string;
+export enum EHeroActionType {
+    SPELL
 }
 
-export interface IHeroCardInfo {
-    name: string;
-    description: string;
+///////////////////////////////////////////////////////////////////////////
+///////////////////////////// ACTIONS CARD  ///////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+export interface IActionEffect {
+    actionName: EActionEffect;
+    actionValue?: number;
+    description?: string;
+}
+
+export enum EActionEffect{
+    MANA,
+    FREEZE,
+    DAMAGE
 }
 
 

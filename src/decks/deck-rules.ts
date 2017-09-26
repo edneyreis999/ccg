@@ -3,6 +3,7 @@ import {IHeroChampionRules, IAvatarChampionRules} from '../champion/champion-rul
 export interface IHeroDeckRules {
     // Deck composto por 3 heros
     heros: [IHeroChampionRules, IHeroChampionRules, IHeroChampionRules];
+    ultimate: string;
 }
 
 export interface IAvatarDeckRules {

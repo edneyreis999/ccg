@@ -6,12 +6,13 @@ export interface ICard extends Mongoose.Document {
     userId: string;
     name: string;
     faction: EChampionFaction;
-    factionDescription: string;
     class: HeroClass | AvatarClass;
-    classDescription:string;
     version: number;
     rules: IAvatarCardRules | IHeroCardRules;
+    ruleDescription:string,
     description?: string;
+    assetName:string;
+    assetNumber:number;
     createdAt: Date;
     updateAt: Date;
 }
@@ -20,10 +21,12 @@ export const CardSchema = new Mongoose.Schema({
     userId: { type: String, required: true },
     name: { type: String, required: true },
     class: { type: Number, required: true },
-    classDescription: {type: String},
     version: { type: Number, required: true },
     rules: { type: Object, required: true },
     faction: {type: Number, required: true},
+    assetName: {type: String, required: true},
+    assetNumber: {type: Number, required: true},
+    ruleDescription: {type: String, required: true},
     factionDescription: {type: String},
     description: String
 }, {

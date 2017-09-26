@@ -3,6 +3,7 @@ import { IServerConfigurations } from "./configurations";
 import * as Decks from "./decks";
 import * as Champion from "./champion";
 import * as Card from "./card";
+import * as Collection from "./collection";
 import { IDatabase } from "./database";
 
 
@@ -29,7 +30,8 @@ export function init(configs: IServerConfigurations, database: IDatabase): Promi
         console.log('Register Routes');
         Decks.init(server, configs, database);     
         Champion.init(server, configs, database);      
-        Card.init(server, configs, database);             
+        Card.init(server, configs, database);   
+        Collection.init(server, configs, database);          
         console.log('Routes registered sucessfully.');
 
         resolve(server);
