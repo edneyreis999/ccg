@@ -94,7 +94,6 @@ export default class DeckController {
         }else{
             return reply("invalid deck id: "+id);
         }
-        
     }
 
     public async getDeckById(request: Hapi.Request, reply: Hapi.ReplyNoContinue) {

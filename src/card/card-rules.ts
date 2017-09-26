@@ -1,12 +1,12 @@
-import {HeroClass, AvatarClass} from '../champion/champion-rules'
+import { HeroClass, AvatarClass } from '../champion/champion-rules'
 
 ///////////////////////////////////////////////////////////////////////////
 //////////////////////////// AVATAR CARD  /////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 export interface IAvatarCardRules {
     // 1 Tipo, 1 Avatar, set spacific information
-    action: EAvatarActionType;
-    actionEffect: Array<IActionEffect>;
+    action: EActionType;
+    actionEffect?: Array<IActionEffect>;
     completionEffect?: Array<IActionEffect>;
     destructionEffect?: Array<IActionEffect>;
     triggerEfect?: Array<IActionEffect>;
@@ -19,33 +19,31 @@ export interface IDestructionCondition {
     description?: string;
 }
 export interface ITriggerCondition {
-    actionName: EDestructionCondition;
+    actionName: ETriggerCondition;
     actionValue?: number;
     description?: string;
 }
 
-export enum EAvatarActionType {
+export enum EActionType {
     SPELL,
     OBJECTIVE,
     ENRAGE
 }
 export enum EDestructionCondition {
-   
+    KILL,
+    DAMAGE
 }
 export enum ETriggerCondition {
-    
+    KILL,
+    DAMAGE
 }
 ///////////////////////////////////////////////////////////////////////////
 ////////////////////////////// HEROS CARD  ////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 export interface IHeroCardRules {
     // 1 Classe, 1 Action, set spacific information
-    action: EHeroActionType;
+    action: EActionType;
     actionEffect: Array<IActionEffect>;
-}
-
-export enum EHeroActionType {
-    SPELL
 }
 
 ///////////////////////////////////////////////////////////////////////////
@@ -57,10 +55,13 @@ export interface IActionEffect {
     description?: string;
 }
 
-export enum EActionEffect{
+export enum EActionEffect {
     MANA,
     FREEZE,
-    DAMAGE
+    DAMAGE,
+    HEALTH,
+    BOOST_DAMAGE,
+    NEXT_ATTACK_HK
 }
 
 

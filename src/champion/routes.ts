@@ -1,5 +1,7 @@
 import * as Hapi from "hapi";
 import ChampionController from "./champion-controller";
+import * as ChampionValidator from "./champion-validator";
+import * as Joi from "joi";
 import { IDatabase } from "../database";
 import { IServerConfigurations } from "../configurations";
 
@@ -13,7 +15,12 @@ export default function (server: Hapi.Server, configs: IServerConfigurations, da
         path: '/champion/{id}',
         config: {
             handler: championController.getChampionById,
-            description: 'Get champion by id'
+            description: 'Get champion by id',
+            validate: {
+                params: {
+                    id: Joi.string().required()
+                },
+            }
         }
     });
 
@@ -33,7 +40,12 @@ export default function (server: Hapi.Server, configs: IServerConfigurations, da
         config: {
             handler: championController.deleteChampion,
             tags: ['api', 'champions'],
-            description: 'Delete champion by id.'
+            description: 'Delete champion by id.',
+            validate: {
+                params: {
+                    id: Joi.string().required()
+                },
+            }
         }
     });
 
@@ -44,6 +56,12 @@ export default function (server: Hapi.Server, configs: IServerConfigurations, da
             handler: championController.updateChampion,
             tags: ['api', 'champions'],
             description: 'Update champion by id.',
+            validate: {
+                params: {
+                    id: Joi.string().required()
+                },
+                payload: ChampionValidator.verifyChampionModelAttributes
+            }
         }
     });
 
@@ -54,6 +72,9 @@ export default function (server: Hapi.Server, configs: IServerConfigurations, da
             handler: championController.createChampion,
             tags: ['api', 'champions'],
             description: 'Create a champion.',
+            validate: {
+                payload: ChampionValidator.verifyChampionModelAttributes
+            }
         }
     });
 }
