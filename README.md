@@ -31,4 +31,10 @@ Installation Instructions => `https://docs.mongodb.com/manual/tutorial/install-m
 `*-rules.ts` Contains the game rules logic.
 `*-controller.ts` Handler the routes logic.  
 
+by default the server will starts at port 5000
+
+http://localhost:5000/api/card => CRUD for object Card
+http://localhost:5000/api/champion => CRUD for object Champion
+http://localhost:5000/api/decks => CRUD for object Deck
+http://localhost:5000/api/collection => There is only GET routes and needs to pass {userId} in all routes.
 
