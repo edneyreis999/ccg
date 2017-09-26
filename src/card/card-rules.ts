@@ -1,9 +1,11 @@
 import { HeroClass, AvatarClass } from '../champion/champion-rules'
-
+export interface IBasicCardRules {
+    class: HeroClass | AvatarClass;
+}
 ///////////////////////////////////////////////////////////////////////////
 //////////////////////////// AVATAR CARD  /////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
-export interface IAvatarCardRules {
+export interface IAvatarCardRules extends IBasicCardRules{
     // 1 Tipo, 1 Avatar, set spacific information
     action: EActionType;
     actionEffect?: Array<IActionEffect>;
@@ -40,7 +42,7 @@ export enum ETriggerCondition {
 ///////////////////////////////////////////////////////////////////////////
 ////////////////////////////// HEROS CARD  ////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
-export interface IHeroCardRules {
+export interface IHeroCardRules extends IBasicCardRules{
     // 1 Classe, 1 Action, set spacific information
     action: EActionType;
     actionEffect: Array<IActionEffect>;

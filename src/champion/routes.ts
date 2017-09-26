@@ -1,6 +1,5 @@
 import * as Hapi from "hapi";
 import ChampionController from "./champion-controller";
-import * as ChampionValidator from "./champion-validator";
 import * as Joi from "joi";
 import { IDatabase } from "../database";
 import { IServerConfigurations } from "../configurations";
@@ -59,8 +58,7 @@ export default function (server: Hapi.Server, configs: IServerConfigurations, da
             validate: {
                 params: {
                     id: Joi.string().required()
-                },
-                payload: ChampionValidator.verifyChampionModelAttributes
+                }
             }
         }
     });
@@ -71,10 +69,7 @@ export default function (server: Hapi.Server, configs: IServerConfigurations, da
         config: {
             handler: championController.createChampion,
             tags: ['api', 'champions'],
-            description: 'Create a champion.',
-            validate: {
-                payload: ChampionValidator.verifyChampionModelAttributes
-            }
+            description: 'Create a champion.'            
         }
     });
 }

@@ -1,4 +1,5 @@
 import {IHeroCardRules, IAvatarCardRules} from '../card/card-rules'
+import {ICard} from '../card/card'
 
 export interface IBasicsChampionRules {
     name: string;
@@ -30,7 +31,7 @@ export enum AvatarClass {
 ///////////////////////////////////////////////////////////////////////////
 export interface IHeroChampionRules extends IBasicsChampionRules {
     // 2 Actions
-    actionCards: [IHeroCardRules, IHeroCardRules];
+    actionCards: [ICard, ICard];
 }
 
 export enum HeroClass {

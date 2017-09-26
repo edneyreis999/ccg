@@ -1,135 +1,189 @@
 {
-    "info" : {
-        "name" : "Deck de hero",
-        "description" : "Bem massa",
-        "userId" : "1",
-        "rules" : {
-            "heros" : [ 
+    "info": {
+        "name": "Deck de hero",
+        "description": "Bem massa",
+        "userId": "1",
+        "rules": {
+            "heros": [
                 {
-                    "name" : "Garoosh",
-                    "health" : 10,
-                    "class" : 0,
-                    "actionCards" : [ 
+                    "name": "Jaina",
+                    "health": 10,
+                    "class": 0,
+                    "actionCards": [
                         {
-                            "name" : "",
-                            "heroClass" : 0,
-                            "actionInfo" : [ 
-                                {
-                                    "description" : "deal damage to all enemies",
-                                    "name" : "area effect"
-                                }, 
-                                {
-                                    "description" : "after action hero cant attack 1 turn",
-                                    "name" : "stun"
-                                }
-                            ],
-                            "action" : {
-                                "description" : "Deliver multiples attacks",
-                                "name" : "whirlwind"
+                            "name": "Fire Ball",
+                            "description": "A Fire Ball!",
+                            "class": 0,
+                            "faction": 0,
+                            "version": 1,
+                            "rules": {
+                                "action": 0,
+                                "triggerEfect": [],
+                                "triggerCondition": [],
+                                "destructionEffect": [],
+                                "destructionCondition": [],
+                                "completionEffect": [],
+                                "actionEffect": [
+                                    {
+                                        "actionName": 2,
+                                        "actionValue": 2,
+                                        "description": "Damage by 4"
+                                    },
+                                    {
+                                        "actionName": 0,
+                                        "actionValue": -4,
+                                        "description": "Mana -4"
+                                    }
+                                ]
                             }
-                        }, 
+                        },
                         {
-                            "name" : "",
-                            "heroClass" : 0,
-                            "actionInfo" : [ 
-                                {
-                                    "description" : "reduce damage by x %",
-                                    "name" : "reduce damage"
-                                }, 
-                                {
-                                    "description" : "immunity to all crownd control effects",
-                                    "name" : "immunity"
-                                }
-                            ],
-                            "action" : {
-                                "description" : "Reduce all damage taken by 50%",
-                                "name" : "ignore pain"
+                            "name": "Fire Ball",
+                            "description": "A Fire Ball!",
+                            "class": 0,
+                            "faction": 0,
+                            "version": 1,
+                            "rules": {
+                                "action": 0,
+                                "triggerEfect": [],
+                                "triggerCondition": [],
+                                "destructionEffect": [],
+                                "destructionCondition": [],
+                                "completionEffect": [],
+                                "actionEffect": [
+                                    {
+                                        "actionName": 2,
+                                        "actionValue": 2,
+                                        "description": "Damage by 4"
+                                    },
+                                    {
+                                        "actionName": 0,
+                                        "actionValue": -4,
+                                        "description": "Mana -4"
+                                    }
+                                ]
                             }
                         }
                     ]
-                }, 
+                },
                 {
-                    "name" : "Garoosh",
-                    "health" : 10,
-                    "class" : 0,
-                    "actionCards" : [ 
+                    "name": "Jaina",
+                    "health": 10,
+                    "class": 0,
+                    "actionCards": [
                         {
-                            "name" : "",
-                            "heroClass" : 0,
-                            "actionInfo" : [ 
-                                {
-                                    "description" : "deal damage to all enemies",
-                                    "name" : "area effect"
-                                }, 
-                                {
-                                    "description" : "after action hero cant attack 1 turn",
-                                    "name" : "stun"
-                                }
-                            ],
-                            "action" : {
-                                "description" : "Deliver multiples attacks",
-                                "name" : "whirlwind"
+                            "name": "Fire Ball",
+                            "description": "A Fire Ball!",
+                            "class": 0,
+                            "faction": 0,
+                            "version": 1,
+                            "rules": {
+                                "action": 0,
+                                "triggerEfect": [],
+                                "triggerCondition": [],
+                                "destructionEffect": [],
+                                "destructionCondition": [],
+                                "completionEffect": [],
+                                "actionEffect": [
+                                    {
+                                        "actionName": 2,
+                                        "actionValue": 2,
+                                        "description": "Damage by 4"
+                                    },
+                                    {
+                                        "actionName": 0,
+                                        "actionValue": -4,
+                                        "description": "Mana -4"
+                                    }
+                                ]
                             }
-                        }, 
+                        },
                         {
-                            "name" : "",
-                            "heroClass" : 0,
-                            "actionInfo" : [ 
-                                {
-                                    "description" : "reduce damage by x %",
-                                    "name" : "reduce damage"
-                                }, 
-                                {
-                                    "description" : "immunity to all crownd control effects",
-                                    "name" : "immunity"
-                                }
-                            ],
-                            "action" : {
-                                "description" : "Reduce all damage taken by 50%",
-                                "name" : "ignore pain"
+                            "name": "Fire Ball",
+                            "description": "A Fire Ball!",
+                            "class": 0,
+                            "faction": 0,
+                            "version": 1,
+                            "rules": {
+                                "action": 0,
+                                "triggerEfect": [],
+                                "triggerCondition": [],
+                                "destructionEffect": [],
+                                "destructionCondition": [],
+                                "completionEffect": [],
+                                "actionEffect": [
+                                    {
+                                        "actionName": 2,
+                                        "actionValue": 2,
+                                        "description": "Damage by 4"
+                                    },
+                                    {
+                                        "actionName": 0,
+                                        "actionValue": -4,
+                                        "description": "Mana -4"
+                                    }
+                                ]
                             }
                         }
                     ]
-                }, 
+                },
                 {
-                    "name" : "Garoosh",
-                    "health" : 10,
-                    "class" : 0,
-                    "actionCards" : [ 
+                    "name": "Jaina",
+                    "health": 10,
+                    "class": 0,
+                    "actionCards": [
                         {
-                            "name" : "",
-                            "heroClass" : 0,
-                            "actionInfo" : [ 
-                                {
-                                    "description" : "deal damage to all enemies",
-                                    "name" : "area effect"
-                                }, 
-                                {
-                                    "description" : "after action hero cant attack 1 turn",
-                                    "name" : "stun"
-                                }
-                            ],
-                            "action" : {
-                                "description" : "Deliver multiples attacks",
-                                "name" : "whirlwind"
+                            "name": "Fire Ball",
+                            "description": "A Fire Ball!",
+                            "class": 0,
+                            "faction": 0,
+                            "version": 1,
+                            "rules": {
+                                "action": 0,
+                                "triggerEfect": [],
+                                "triggerCondition": [],
+                                "destructionEffect": [],
+                                "destructionCondition": [],
+                                "completionEffect": [],
+                                "actionEffect": [
+                                    {
+                                        "actionName": 2,
+                                        "actionValue": 2,
+                                        "description": "Damage by 4"
+                                    },
+                                    {
+                                        "actionName": 0,
+                                        "actionValue": -4,
+                                        "description": "Mana -4"
+                                    }
+                                ]
                             }
-                        }, 
+                        },
                         {
-                            "name" : "",
-                            "heroClass" : 0,
-                            "actionInfo" : [ 
-                                {
-                                    "description" : "reduce damage by x %",
-                                    "name" : "reduce damage"
-                                }, 
-                                {
-                                    "description" : "immunity to all crownd control effects",
-                                    "name" : "immunity"
-                                }
-                            ],
-                            "action" : {
-                                "description" : "Reduce all damage taken by 50%",
-                                "name" : "ignore pain"
+                            "name": "Fire Ball",
+                            "description": "A Fire Ball!",
+                            "class": 0,
+                            "faction": 0,
+                            "version": 1,
+                            "rules": {
+                                "action": 0,
+                                "triggerEfect": [],
+                                "triggerCondition": [],
+                                "destructionEffect": [],
+                                "destructionCondition": [],
+                                "completionEffect": [],
+                                "actionEffect": [
+                                    {
+                                        "actionName": 2,
+                                        "actionValue": 2,
+                                        "description": "Damage by 4"
+                                    },
+                                    {
+                                        "actionName": 0,
+                                        "actionValue": -4,
+                                        "description": "Mana -4"
+                                    }
+                                ]
                             }
                         }
                     ]
@@ -137,5 +191,5 @@
             ]
         }
     },
-    "type" : 0
+    "type": 0
 }

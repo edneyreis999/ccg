@@ -1,6 +1,5 @@
 import * as Hapi from "hapi";
 import DeckController from "./deck-controller";
-import * as DeckValidator from "./deck-validator";
 import * as Joi from "joi";
 import { IDatabase } from "../database";
 import { IServerConfigurations } from "../configurations";
@@ -67,8 +66,7 @@ export default function (server: Hapi.Server, configs: IServerConfigurations, da
                 params: {
                     id: Joi.string().required(),
                     userId: Joi.string().required()
-                },
-                payload: DeckValidator.verifyDeckModelAttributes
+                }
             }
         }
     });
@@ -83,8 +81,7 @@ export default function (server: Hapi.Server, configs: IServerConfigurations, da
             validate: {
                 params: {
                     userId: Joi.string().required()
-                },
-                payload: DeckValidator.verifyDeckModelAttributes
+                }
             }
         }
     });

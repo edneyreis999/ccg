@@ -6,4 +6,13 @@
     "description" : "Projetado para ser um hero mage",
     "health" : "10",
     "version" : 1
+},
+{
+    "userId" : "1",
+    "faction": 1,
+    "class" : 0,
+    "name" : "Trololo",
+    "description" : "Um troll",
+    "health" : "10",
+    "version" : 1
 }

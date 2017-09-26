@@ -1,6 +1,5 @@
 import * as Hapi from "hapi";
 import CardController from "./card-controller";
-import * as CardValidator from "./card-validator";
 import * as Joi from "joi";
 import { IDatabase } from "../database";
 import { IServerConfigurations } from "../configurations";
@@ -59,8 +58,7 @@ export default function (server: Hapi.Server, configs: IServerConfigurations, da
             validate: {
                 params: {
                     id: Joi.string().required()
-                },
-                payload: CardValidator.verifyCardModelAttributes
+                }
             }
         }
     });
@@ -72,9 +70,6 @@ export default function (server: Hapi.Server, configs: IServerConfigurations, da
             handler: cardController.createCard,
             tags: ['api', 'cards'],
             description: 'Create a card.',
-            validate: {
-                payload: CardValidator.verifyCardModelAttributes,
-            }
         }
     });
 }

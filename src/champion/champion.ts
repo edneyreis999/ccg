@@ -9,8 +9,8 @@ export interface IChampion extends Mongoose.Document {
     class: AvatarClass | HeroClass;
     health?: number;
     description?: string;
-    assetName:string;
-    assetNumber:number;
+    assetName: string;
+    assetNumber: number;
     version: number;
     createdAt: Date;
     updateAt: Date;
@@ -20,13 +20,13 @@ export const ChampionSchema = new Mongoose.Schema({
     userId: { type: String, required: true },
     rules: Object,
     name: { type: String, required: true },
-    faction: {type: Number, required: true},
-    class: { type: Number, required: true }, 
-    assetName: {type: String, required: true},
-    assetNumber: {type: Number, required: true},   
+    faction: { type: Number, required: true },
+    class: { type: Number, required: true },
+    assetName: { type: String, required: true },
+    assetNumber: { type: Number, required: true },
     health: String,
     description: String,
-    version: { type: Number, required: true }, 
+    version: { type: Number, required: true },
 }, {
         timestamps: true
     });

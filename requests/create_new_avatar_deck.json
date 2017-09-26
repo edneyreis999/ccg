@@ -8,84 +8,231 @@
         "rules": {
             "avatar": {
                 "enrageCard": {
-                    "actionInfo": [
-                        {
-                            "description": "Boosts Avatar's attack when it recive damage",
-                            "name": "pain"
-                        }
-                    ],
-                    "action": 3,
-                    "name": "hate fill pain",
-                    "class": 0
+                    "userId" : "1",
+                    "name" : "Frenesi",
+                    "description" : "Boost avatar's power!",
+                    "class" : 0,
+                    "faction" : 1,
+                    "version" : 1,
+                    "rules" : {
+                        "action" : 2,
+                        "triggerEfect" : [ 
+                            {
+                                "actionName" : 3,
+                                "actionValue" : -2,
+                                "description" : "Reduce Health by 2"
+                            }, 
+                            {
+                                "actionName" : 4,
+                                "actionValue" : 2,
+                                "description" : "Boost your attack by 2"
+                            }
+                        ],
+                        "triggerCondition" : [ 
+                            {
+                                "actionName" : 0,
+                                "actionValue" : 1,
+                                "description" : "Kill 1 hero"
+                            }
+                        ],
+                        "destructionEffect" : [],
+                        "destructionCondition" : [],
+                        "completionEffect" : [],
+                        "actionEffect" : []
+                    },
+                    "assetNumber" : 5,
+                    "assetName" : "AVATAR_TROLL_ENRAGE_5",
+                    "ruleDescription" : "ENRAGE _ Trigger => KILL_1| Effects => HEALTH_-2 + BOOST_DAMAGE_2"
                 },
                 "objectiveCards": [
                     {
-                        "actionInfo": [
-                            {
-                                "description": "Boosts Avatar's attack when it attacks",
-                                "name": "fury"
-                            }
-                        ],
-                        "action": 2,
-                        "name": "make him suffer",
-                        "class": 0
+                        "userId" : "1",
+                        "name" : "make him suffer",
+                        "description" : "Boost avatar's power!",
+                        "class" : 0,
+                        "faction" : 1,
+                        "version" : 1,
+                        "rules" : {
+                            "action" : 1,
+                            "triggerEfect" : [],
+                            "triggerCondition" : [],
+                            "destructionEffect" : [ 
+                                {
+                                    "actionName" : 4,
+                                    "actionValue" : 10,
+                                    "description" : "Boost your attack by 10"
+                                }
+                            ],
+                            "destructionCondition" : [ 
+                                {
+                                    "actionName" : 1,
+                                    "actionValue" : 10,
+                                    "description" : "Do 10 damage to a enemy"
+                                }
+                            ],
+                            "completionEffect" : [],
+                            "actionEffect" : []
+                        },
+                        "assetNumber" : 3,
+                        "assetName" : "AVATAR_TROLL_OBJECTIVE_3"
                     },
                     {
-                        "actionInfo": [
-                            {
-                                "description": "Boosts Avatar's attack when it kills a enemy",
-                                "name": "killing spree"
-                            }
-                        ],
-                        "action": 2,
-                        "name": "kill them all",
-                        "class": 0
+                        "userId" : "1",
+                        "name" : "Kill then all",
+                        "description" : "Boost avatar's power!",
+                        "class" : 0,
+                        "faction" : 1,
+                        "version" : 1,
+                        "rules" : {
+                            "action" : 1,
+                            "triggerEfect" : [],
+                            "triggerCondition" : [],
+                            "destructionEffect" : [ 
+                                {
+                                    "actionName" : 4,
+                                    "actionValue" : 10,
+                                    "description" : "Boost your attack by 10"
+                                }
+                            ],
+                            "destructionCondition" : [ 
+                                {
+                                    "actionName" : 0,
+                                    "actionValue" : 2,
+                                    "description" : "Kill 2 hero"
+                                }
+                            ],
+                            "completionEffect" : [],
+                            "actionEffect" : []
+                        },
+                        "assetNumber" : 4,
+                        "assetName" : "AVATAR_TROLL_OBJECTIVE_4",
+                        "ruleDescription" : "OBJECTIVE _ Conditions => KILL_2| Effects => BOOST_DAMAGE_10"
                     }
                 ],
                 "spellCards": [
                     {
-                        "actionInfo": [
-                            {
-                                "description": "freeze a enemy",
-                                "name": "freeze"
-                            }
-                        ],
-                        "action": 1,
-                        "name": "ice lance",
-                        "class": 0
+                        "userId" : "1",
+                        "name" : "Throw Stone",
+                        "description" : "Throw a Stone",
+                        "class" : 0,
+                        "faction" : 1,
+                        "version" : 1,
+                        "rules" : {
+                            "action" : 0,
+                            "triggerEfect" : [],
+                            "triggerCondition" : [],
+                            "destructionEffect" : [],
+                            "destructionCondition" : [],
+                            "completionEffect" : [],
+                            "actionEffect" : [ 
+                                {
+                                    "actionName" : 2,
+                                    "actionValue" : 1,
+                                    "description" : "Damage by 1"
+                                }, 
+                                {
+                                    "actionName" : 0,
+                                    "actionValue" : -1,
+                                    "description" : "Mana -1"
+                                }
+                            ]
+                        },
+                        "assetNumber" : 3,
+                        "assetName" : "AVATAR_TROLL_SPELL_3",
+                        "ruleDescription" : "SPELL _ DAMAGE_1 + MANA_-1"
                     },
                     {
-                        "actionInfo": [
-                            {
-                                "description": "stun a enemy",
-                                "name": "stun"
-                            }
-                        ],
-                        "action": 1,
-                        "name": "stone throw",
-                        "class": 0
+                        "userId" : "1",
+                        "name" : "Throw Stone",
+                        "description" : "Throw a Stone",
+                        "class" : 0,
+                        "faction" : 1,
+                        "version" : 1,
+                        "rules" : {
+                            "action" : 0,
+                            "triggerEfect" : [],
+                            "triggerCondition" : [],
+                            "destructionEffect" : [],
+                            "destructionCondition" : [],
+                            "completionEffect" : [],
+                            "actionEffect" : [ 
+                                {
+                                    "actionName" : 2,
+                                    "actionValue" : 2,
+                                    "description" : "Damage by 2"
+                                }, 
+                                {
+                                    "actionName" : 0,
+                                    "actionValue" : -2,
+                                    "description" : "Mana -2"
+                                }
+                            ]
+                        },
+                        "assetNumber" : 2,
+                        "assetName" : "AVATAR_TROLL_SPELL_2",
+                        "ruleDescription" : "SPELL _ DAMAGE_2 + MANA_-2"
                     },
                     {
-                        "actionInfo": [
-                            {
-                                "description": "Avatar can attack two times",
-                                "name": "windfury"
-                            }
-                        ],
-                        "action": 1,
-                        "name": "windfury",
-                        "class": 0
+                        "userId" : "1",
+                        "name" : "Throw Stone",
+                        "description" : "Throw a Stone",
+                        "class" : 0,
+                        "faction" : 1,
+                        "version" : 1,
+                        "rules" : {
+                            "action" : 0,
+                            "triggerEfect" : [],
+                            "triggerCondition" : [],
+                            "destructionEffect" : [],
+                            "destructionCondition" : [],
+                            "completionEffect" : [],
+                            "actionEffect" : [ 
+                                {
+                                    "actionName" : 2,
+                                    "actionValue" : 2,
+                                    "description" : "Damage by 4"
+                                }, 
+                                {
+                                    "actionName" : 0,
+                                    "actionValue" : -4,
+                                    "description" : "Mana -4"
+                                }
+                            ]
+                        },
+                        "assetNumber" : 1,
+                        "assetName" : "AVATAR_TROLL_SPELL_1",
+                        "ruleDescription" : "SPELL _ DAMAGE_2 + MANA_-4"
                     },
                     {
-                        "actionInfo": [
-                            {
-                                "description": "Heals itself",
-                                "name": "heal"
-                            }
-                        ],
-                        "action": 1,
-                        "name": "first aid",
-                        "class": 0
+                        "userId" : "1",
+                        "name" : "Throw Stone",
+                        "description" : "Throw a Stone",
+                        "class" : 0,
+                        "faction" : 1,
+                        "version" : 1,
+                        "rules" : {
+                            "action" : 0,
+                            "triggerEfect" : [],
+                            "triggerCondition" : [],
+                            "destructionEffect" : [],
+                            "destructionCondition" : [],
+                            "completionEffect" : [],
+                            "actionEffect" : [ 
+                                {
+                                    "actionName" : 2,
+                                    "actionValue" : 2,
+                                    "description" : "Damage by 4"
+                                }, 
+                                {
+                                    "actionName" : 0,
+                                    "actionValue" : -4,
+                                    "description" : "Mana -4"
+                                }
+                            ]
+                        },
+                        "assetNumber" : 1,
+                        "assetName" : "AVATAR_TROLL_SPELL_1",
+                        "ruleDescription" : "SPELL _ DAMAGE_2 + MANA_-4"
                     }
                 ],
                 "health": 10,
