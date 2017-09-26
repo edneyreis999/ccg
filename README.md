@@ -7,9 +7,28 @@ The compiler will compile files automatically when saved.
 
 To stop the compilation, press `Ctrl+Shift+P` → `> Tasks: Terminate Running Task`.
 
-JS source maps are excluded from git to reduce clutter, you can re-enable them in `.gitignore`.
+To run the project install nodejs and npm.
 
-Press `F5` to run application.
+`npm install` on project root
+
+`npm start` on project root to run application.
 
 `src/index.ts` ← code goes here  
-`test/test.ts` ← tests go here
+
+in folder `requests` has some exemples how to add objects in databse
+
+in folder `js` has the transpiled .ts code
+
+To install mongodb, acess `https://www.mongodb.com/download-center?ct=atlasheader#atlas` choose community server, your SO and install.
+
+Installation Instructions => `https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/`
+
+`src/index.ts` starts de application, put together database and server settings.
+`src/server.ts` Create all routes and start the server.
+`src/database.ts` Create database settings and starts the Models
+`src/configurations` Contains some consts to help setup database and server.
+`src/card`,`src/champion`,`src/decks`, `src/collection` Setup routes for each object.
+`*-rules.ts` Contains the game rules logic.
+`*-controller.ts` Handler the routes logic.  
+
+

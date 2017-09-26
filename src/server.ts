@@ -24,8 +24,6 @@ export function init(configs: IServerConfigurations, database: IDatabase): Promi
         if (configs.routePrefix) {
             server.realm.modifiers.route.prefix = configs.routePrefix;
         }
-
-        console.log('All plugins registered successfully.');
         
         console.log('Register Routes');
         Decks.init(server, configs, database);     
